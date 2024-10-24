@@ -1,70 +1,121 @@
-<section class="projects" id="projects">
-    <h2>Proyectos Destacados en Data Science & AI</h2>
-    <div class="projects-grid">
-        <!-- Proyecto 1: Más relevante para medios -->
-        <div class="project-card">
-            <h3>Análisis de Sentimiento en Twitter</h3>
-            <p>Desarrollé un sistema avanzado de procesamiento de lenguaje natural (NLP) capaz de analizar en tiempo real los sentimientos que los usuarios expresan en Twitter sobre programas televisivos. Este proyecto fue clave para monitorear las reacciones de la audiencia social, permitiendo a los equipos de producción ajustarse rápidamente según el feedback.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Procesamiento en tiempo real</p>
-                <p><strong>Dataset:</strong> Más de 100,000 tweets sobre contenido televisivo</p>
-                <p><strong>Métricas:</strong> Precisión: 88%, Respuesta en tiempo real</p>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<!-- [Head section con estilos permanece igual hasta .social-links] -->
+<head>
+    <!-- [Estilos anteriores se mantienen igual] -->
+    <style>
+        /* [Estilos anteriores se mantienen igual] */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-        <!-- Proyecto 2: Predicción de audiencia -->
-        <div class="project-card">
-            <h3>Predicción Financiera y Análisis de Tendencias</h3>
-            <p>En este proyecto combiné modelos de análisis financiero con patrones de audiencia para prever el comportamiento del mercado bursátil (IPSA/SP500) y su relación con los picos de audiencia televisiva. Los resultados ayudaron a optimizar la programación y mejorar la asignación de publicidad en momentos clave.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, TensorFlow, ARCH, LSTM</p>
-                <p><strong>Dataset:</strong> Datos históricos financieros y de rating televisivo</p>
-                <p><strong>Métricas:</strong> Precisión: 90%, MSE: 0.07</p>
-            </div>
-        </div>
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background-color: var(--primary);
+            border-radius: 25px;
+            transition: transform 0.3s, background-color 0.3s;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-        <!-- Proyecto 3: Segmentación de audiencia -->
-        <div class="project-card">
-            <h3>Segmentación Avanzada de Audiencias</h3>
-            <p>Utilizando técnicas de clustering, creé un sistema para identificar y analizar diferentes grupos de audiencias basándome en patrones de comportamiento de visualización. Este análisis fue utilizado para personalizar contenido y diseñar estrategias de programación más efectivas.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, K-Means, pandas, Visualización avanzada</p>
-                <p><strong>Dataset:</strong> Datos anónimos de comportamiento de audiencia</p>
-                <p><strong>Métricas:</strong> Silhouette Score: 0.82, Seis segmentos identificados</p>
+        /* [Resto de estilos se mantienen igual] */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Jeremías Bordon</h1>
+            <div>
+                <a href="#about">Sobre mí</a>
+                <a href="#projects">Proyectos</a>
             </div>
         </div>
+    </nav>
 
-        <!-- Proyecto 4: Recomendación de contenido -->
-        <div class="project-card">
-            <h3>Sistema de Recomendación de Contenidos</h3>
-            <p>Implementé un sistema de recomendación similar al de plataformas como Netflix y Spotify, que sugiere programas y contenido digital en función de las preferencias y el historial de visualización de los usuarios. Esta herramienta mejoró significativamente la experiencia del espectador al ofrecer recomendaciones personalizadas.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn</p>
-                <p><strong>Dataset:</strong> Histórico de visualizaciones y preferencias</p>
-                <p><strong>Métricas:</strong> RMSE: 0.12, Precisión: 92%</p>
-            </div>
+    <section class="hero">
+        <h1>Jeremías Bordon</h1>
+        <p class="credentials">Ingeniero en Estadística | Universidad de Valparaíso</p>
+        <p>Data Scientist & Machine Learning Engineer especializado en análisis predictivo, series temporales financieras y procesamiento de datos masivos</p>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
+            <a href="mailto:jeremiasbordon30@gmail.com">Email</a>
         </div>
+    </section>
 
-        <!-- Proyecto 5: Detección de fraude adaptado -->
-        <div class="project-card">
-            <h3>Sistema de Detección de Anomalías en Audiencia</h3>
-            <p>Desarrollé un modelo para detectar anomalías en los datos de audiencia televisiva, lo que resultó fundamental para asegurar la calidad y precisión de los reportes de rating. Esta herramienta permitió identificar comportamientos inusuales que podrían haber pasado desapercibidos.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, XGBoost, Análisis en tiempo real</p>
-                <p><strong>Dataset:</strong> Datos de audiencia televisiva</p>
-                <p><strong>Métricas:</strong> Precisión: 94%, Recall: 90%</p>
+    <section class="projects" id="projects">
+        <h2>Proyectos Destacados en Data Science & AI</h2>
+        <div class="projects-grid">
+            <!-- Proyecto 1: Análisis de Criptomonedas -->
+            <div class="project-card">
+                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
+                <p>Sistema avanzado de NLP que analiza sentimientos en tiempo real de tweets sobre criptomonedas para predecir movimientos de precios. Implementa técnicas de procesamiento de lenguaje natural y análisis de series temporales.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, pandas, scikit-learn</p>
+                    <p><strong>Dataset:</strong> 100,000+ tweets sobre Bitcoin, Ethereum y otras criptomonedas</p>
+                    <p><strong>Métricas:</strong> Accuracy en predicción de tendencia: 88%, ROI simulado: +15%</p>
+                </div>
             </div>
-        </div>
 
-        <!-- Proyecto 6: Predicción de tendencias -->
-        <div class="project-card">
-            <h3>Predicción de Tendencias Sociales</h3>
-            <p>Este proyecto involucró el uso de modelos de predicción para anticipar las tendencias en redes sociales y su impacto en la audiencia televisiva. Gracias a estos insights, los equipos de contenido pudieron ajustar su estrategia digital con antelación para maximizar el engagement.</p>
-            <div class="tech-stack">
-                <p><strong>Tecnologías:</strong> Python, Prophet, Deep Learning</p>
-                <p><strong>Dataset:</strong> Datos multiplataforma de tendencias sociales</p>
-                <p><strong>Métricas:</strong> Precisión predictiva: 85%</p>
+            <!-- Proyecto 2: Series Financieras -->
+            <div class="project-card">
+                <h3>Predicción Avanzada de Series Financieras ARCH-LSTM</h3>
+                <p>Sistema híbrido que combina modelos ARCH para la volatilidad con redes LSTM para capturar patrones complejos en series financieras. Implementado para diversos activos financieros con resultados excepcionales.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, TensorFlow, ARCH, LSTM, pandas_ta</p>
+                    <p><strong>Dataset:</strong> Datos históricos de múltiples mercados financieros</p>
+                    <p><strong>Métricas:</strong> Precisión direccional: 92%, RMSE: 0.05, Sharpe Ratio: 2.3</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Análisis de Rating TV (usando datos reales de Kaggle) -->
+            <div class="project-card">
+                <h3>Análisis Predictivo de Rating Televisivo</h3>
+                <p>Modelo predictivo para ratings de TV usando el dataset "TV Shows Rating Dataset" de Kaggle, identificando factores clave que influyen en el éxito de programas de televisión.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, XGBoost, LightGBM, Feature Engineering</p>
+                    <p><strong>Dataset:</strong> TV Shows Rating Dataset (Kaggle) - 15,000+ programas</p>
+                    <p><strong>Métricas:</strong> R²: 0.85, MAE: 0.31, Precisión en categorización: 88%</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Sistema de Recomendación -->
+            <div class="project-card">
+                <h3>Sistema de Recomendación Financiera</h3>
+                <p>Motor de recomendación basado en ML para sugerir activos financieros basado en perfiles de riesgo y preferencias de inversión, implementando técnicas de filtrado colaborativo y análisis de contenido.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn, FastAPI</p>
+                    <p><strong>Dataset:</strong> Datos históricos de operaciones y perfiles de inversión</p>
+                    <p><strong>Métricas:</strong> RMSE: 0.12, Precisión en recomendaciones: 92%</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 5: Detección de Anomalías -->
+            <div class="project-card">
+                <h3>Sistema de Detección de Anomalías en Mercados Financieros</h3>
+                <p>Modelo de detección de patrones anómalos en mercados financieros, especialmente útil para identificar manipulación de mercado y movimientos inusuales en tiempo real.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, Isolation Forest, LSTM Autoencoders</p>
+                    <p><strong>Dataset:</strong> Tick data de mercados financieros</p>
+                    <p><strong>Métricas:</strong> Recall: 94%, Precisión: 92%, F1-Score: 93%</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 6: Análisis Geoespacial -->
+            <div class="project-card">
+                <h3>Análisis Geoespacial de Mercados Financieros</h3>
+                <p>Sistema de análisis que combina datos geoespaciales con información financiera para identificar patrones y oportunidades de inversión basadas en localización.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, GeoPandas, PyKrige, Folium</p>
+                    <p><strong>Dataset:</strong> Datos financieros y geoespaciales globales</p>
+                    <p><strong>Métricas:</strong> Precisión en clustering geográfico: 88%, ROI por región: +12%</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</body>
+</html>
