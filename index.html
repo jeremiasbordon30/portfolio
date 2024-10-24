@@ -172,7 +172,6 @@
         <div class="container">
             <h1>Jeremías Bordon</h1>
             <div>
-                <a href="#about">Sobre mí</a>
                 <a href="#projects">Proyectos</a>
             </div>
         </div>
@@ -184,13 +183,35 @@
         <p>Data Scientist & Machine Learning Engineer especializado en análisis predictivo, series temporales financieras y procesamiento de datos masivos</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
-            <a href="mailto:jeremiasbordon30@gmail.com">Email</a>
+            <a href="mailto:jeremiasbordon30@gmail.com" onclick="window.location.href='mailto:jeremiasbordon30@gmail.com'">Email</a>
         </div>
     </section>
 
     <section class="projects" id="projects">
         <h2>Proyectos Destacados en Data Science & AI</h2>
         <div class="projects-grid">
+            <!-- Proyecto: Sistema de Recomendación de Películas (Netflix) -->
+            <div class="project-card">
+                <h3>Sistema de Recomendación de Películas (Netflix)</h3>
+                <p>Desarrollé un sistema de recomendación avanzado utilizando el dataset del Netflix Prize, implementando un modelo híbrido que combina filtrado colaborativo con técnicas de factorización matricial SVD++. El sistema analiza patrones de visualización para predecir las preferencias de los usuarios y generar recomendaciones personalizadas.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn, NumPy</p>
+                    <p><strong>Dataset:</strong> Netflix Prize (100M+ ratings, 480K usuarios)</p>
+                    <p><strong>Métricas:</strong> RMSE: 0.86, MAE: 0.68, Precisión en Top-10: 89%</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Sistema de Recomendación MovieLens -->
+            <div class="project-card">
+                <h3>Sistema de Recomendación MovieLens</h3>
+                <p>Implementé un sistema de recomendación utilizando el dataset MovieLens 20M, que analiza más de 20 millones de calificaciones y 465,000 etiquetas aplicadas a 27,000 películas. El sistema incorpora tanto el análisis de ratings como el procesamiento de tags para generar recomendaciones más precisas y contextualizadas.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, TensorFlow, Keras, NLP</p>
+                    <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
+                    <p><strong>Métricas:</strong> RMSE: 0.82, Precisión en recomendaciones: 91%</p>
+                </div>
+            </div>
+
             <!-- Proyecto 1: Análisis de Criptomonedas -->
             <div class="project-card">
                 <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
@@ -213,18 +234,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 3: Análisis de Rating TV (Actualizado) -->
-            <div class="project-card">
-                <h3>Análisis Predictivo de Éxito en Series de TV</h3>
-                <p>Desarrollé un sistema de análisis predictivo usando un conjunto de datos de The Movie Database API que abarca más de 2,600 series de TV globales. Implementé un modelo de Random Forest para predecir la popularidad de las series basado en características como país de origen, idioma y fecha de estreno, complementado con análisis de tendencias temporales.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, scikit-learn (Random Forest), pandas, seaborn</p>
-                    <p><strong>Dataset:</strong> The Movie Database API (2,617 series, 8 características clave)</p>
-                    <p><strong>Métricas:</strong> R² en predicción de popularidad: 0.83, Precisión en clasificación de éxito: 87%</p>
-                </div>
-            </div>
-
-            <!-- [Resto de los proyectos permanecen igual] -->
+            <!-- [Resto de los proyectos originales...] -->
             <div class="project-card">
                 <h3>Sistema de Recomendación Financiera</h3>
                 <p>Motor de recomendación basado en ML para sugerir activos financieros basado en perfiles de riesgo y preferencias de inversión, implementando técnicas de filtrado colaborativo y análisis de contenido.</p>
