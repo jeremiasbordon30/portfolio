@@ -1,286 +1,70 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremías Bordon - Data Scientist & ML Engineer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        :root {
-            --primary: #ff6b00;      /* Naranja Canal 13 */
-            --primary-dark: #e65100;
-            --secondary: #1a237e;
-            --bg-light: #fff3e0;
-            --text-dark: #263238;
-        }
-
-        /* Manteniendo los estilos existentes y añadiendo mejoras */
-        body {
-            background-color: var(--bg-light);
-        }
-
-        nav {
-            background-color: var(--secondary);
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 1.5rem;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
-            color: white;
-            padding: 8rem 1rem 6rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .hero p {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .hero .credentials {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #ffd700;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary);
-            border-radius: 25px;
-            transition: transform 0.3s, background-color 0.3s;
-            font-weight: bold;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-            background-color: var(--primary-dark);
-        }
-
-        .projects {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 1rem;
-        }
-
-        .projects h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--secondary);
-            text-align: center;
-            position: relative;
-        }
-
-        .projects h2::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background-color: var(--primary);
-            margin: 1rem auto 0;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background-color: white;
-            border-radius: 12px;
-            padding: 1.75rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--primary);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
-        }
-
-        .project-card p {
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-
-        .tech-stack {
-            margin-top: 1.5rem;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            padding: 1.25rem;
-            border-radius: 8px;
-        }
-
-        .tech-stack p {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="container">
-            <h1>Jeremías Bordon</h1>
-            <div>
-                <a href="#about">Sobre mí</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#contact">Contacto</a>
+<section class="projects" id="projects">
+    <h2>Proyectos Destacados en Data Science & AI</h2>
+    <div class="projects-grid">
+        <!-- Proyecto 1: Más relevante para medios -->
+        <div class="project-card">
+            <h3>Análisis de Sentimiento en Twitter</h3>
+            <p>Desarrollé un sistema avanzado de procesamiento de lenguaje natural (NLP) capaz de analizar en tiempo real los sentimientos que los usuarios expresan en Twitter sobre programas televisivos. Este proyecto fue clave para monitorear las reacciones de la audiencia social, permitiendo a los equipos de producción ajustarse rápidamente según el feedback.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Procesamiento en tiempo real</p>
+                <p><strong>Dataset:</strong> Más de 100,000 tweets sobre contenido televisivo</p>
+                <p><strong>Métricas:</strong> Precisión: 88%, Respuesta en tiempo real</p>
             </div>
         </div>
-    </nav>
 
-    <section class="hero">
-        <h1>Jeremías Bordon</h1>
-        <p class="credentials">Ingeniero en Estadística | Universidad de Valparaíso</p>
-        <p>Data Scientist & Machine Learning Engineer especializado en análisis predictivo y procesamiento de datos masivos para medios de comunicación y análisis de audiencia</p>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
-            <a href="mailto:jeremiasbordon30@gmail.com">Email</a>
-            <a href="tel:+56983564091">Contacto</a>
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
-        <h2>Proyectos Destacados en Data Science & AI</h2>
-        <div class="projects-grid">
-            <!-- Proyecto 1: Más relevante para medios -->
-            <div class="project-card">
-                <h3>Análisis de Sentimiento en Twitter</h3>
-                <p>Sistema avanzado de NLP para análisis de sentimientos en tiempo real de la audiencia social, especialmente útil para medir el impacto de contenidos televisivos y tendencias en redes sociales.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Procesamiento en tiempo real</p>
-                    <p><strong>Dataset:</strong> 100,000+ tweets sobre contenido televisivo</p>
-                    <p><strong>Métricas:</strong> Accuracy: 88%, Respuesta en tiempo real</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 2: Predicción de audiencia -->
-            <div class="project-card">
-                <h3>Predicción Financiera y Análisis de Tendencias</h3>
-                <p>Sistema predictivo que combina análisis financiero (IPSA/SP500) con patrones de audiencia televisiva, ideal para optimización de pautas publicitarias y programación.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, TensorFlow, ARCH, LSTM</p>
-                    <p><strong>Dataset:</strong> Datos históricos financieros y de rating</p>
-                    <p><strong>Métricas:</strong> Precisión: 90%, MSE: 0.07</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 3: Segmentación de audiencia -->
-            <div class="project-card">
-                <h3>Segmentación Avanzada de Audiencias</h3>
-                <p>Sistema de clustering para identificar y analizar segmentos de audiencia, permitiendo personalización de contenido y estrategias de programación optimizadas.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, K-Means, pandas, Visualización avanzada</p>
-                    <p><strong>Dataset:</strong> Datos anónimos de comportamiento de audiencia</p>
-                    <p><strong>Métricas:</strong> Silhouette Score: 0.82, 6 segmentos identificados</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 4: Recomendación de contenido -->
-            <div class="project-card">
-                <h3>Sistema de Recomendación de Contenidos</h3>
-                <p>Motor de recomendación basado en ML para sugerir contenido televisivo y digital, implementado con técnicas similares a Netflix y Spotify.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn</p>
-                    <p><strong>Dataset:</strong> Histórico de visualizaciones y preferencias</p>
-                    <p><strong>Métricas:</strong> RMSE: 0.12, Precisión: 92%</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 5: Detección de fraude adaptado -->
-            <div class="project-card">
-                <h3>Sistema de Detección de Anomalías en Audiencia</h3>
-                <p>Modelo de detección de patrones anómalos en mediciones de audiencia y comportamiento de visualización, crucial para la integridad de datos de rating.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, XGBoost, Análisis en tiempo real</p>
-                    <p><strong>Dataset:</strong> Datos de audiencia televisiva</p>
-                    <p><strong>Métricas:</strong> Accuracy: 94%, Recall: 90%</p>
-                </div>
-            </div>
-
-            <!-- Proyecto 6: Predicción de tendencias -->
-            <div class="project-card">
-                <h3>Predicción de Tendencias Sociales</h3>
-                <p>Sistema predictivo de tendencias en redes sociales y su impacto en la audiencia televisiva, ideal para planificación de contenido y estrategia digital.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Prophet, Deep Learning</p>
-                    <p><strong>Dataset:</strong> Datos multiplataforma de tendencias</p>
-                    <p><strong>Métricas:</strong> Precisión predictiva: 85%</p>
-                </div>
+        <!-- Proyecto 2: Predicción de audiencia -->
+        <div class="project-card">
+            <h3>Predicción Financiera y Análisis de Tendencias</h3>
+            <p>En este proyecto combiné modelos de análisis financiero con patrones de audiencia para prever el comportamiento del mercado bursátil (IPSA/SP500) y su relación con los picos de audiencia televisiva. Los resultados ayudaron a optimizar la programación y mejorar la asignación de publicidad en momentos clave.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, TensorFlow, ARCH, LSTM</p>
+                <p><strong>Dataset:</strong> Datos históricos financieros y de rating televisivo</p>
+                <p><strong>Métricas:</strong> Precisión: 90%, MSE: 0.07</p>
             </div>
         </div>
-    </section>
-</body>
-</html>
+
+        <!-- Proyecto 3: Segmentación de audiencia -->
+        <div class="project-card">
+            <h3>Segmentación Avanzada de Audiencias</h3>
+            <p>Utilizando técnicas de clustering, creé un sistema para identificar y analizar diferentes grupos de audiencias basándome en patrones de comportamiento de visualización. Este análisis fue utilizado para personalizar contenido y diseñar estrategias de programación más efectivas.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, K-Means, pandas, Visualización avanzada</p>
+                <p><strong>Dataset:</strong> Datos anónimos de comportamiento de audiencia</p>
+                <p><strong>Métricas:</strong> Silhouette Score: 0.82, Seis segmentos identificados</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 4: Recomendación de contenido -->
+        <div class="project-card">
+            <h3>Sistema de Recomendación de Contenidos</h3>
+            <p>Implementé un sistema de recomendación similar al de plataformas como Netflix y Spotify, que sugiere programas y contenido digital en función de las preferencias y el historial de visualización de los usuarios. Esta herramienta mejoró significativamente la experiencia del espectador al ofrecer recomendaciones personalizadas.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn</p>
+                <p><strong>Dataset:</strong> Histórico de visualizaciones y preferencias</p>
+                <p><strong>Métricas:</strong> RMSE: 0.12, Precisión: 92%</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 5: Detección de fraude adaptado -->
+        <div class="project-card">
+            <h3>Sistema de Detección de Anomalías en Audiencia</h3>
+            <p>Desarrollé un modelo para detectar anomalías en los datos de audiencia televisiva, lo que resultó fundamental para asegurar la calidad y precisión de los reportes de rating. Esta herramienta permitió identificar comportamientos inusuales que podrían haber pasado desapercibidos.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, XGBoost, Análisis en tiempo real</p>
+                <p><strong>Dataset:</strong> Datos de audiencia televisiva</p>
+                <p><strong>Métricas:</strong> Precisión: 94%, Recall: 90%</p>
+            </div>
+        </div>
+
+        <!-- Proyecto 6: Predicción de tendencias -->
+        <div class="project-card">
+            <h3>Predicción de Tendencias Sociales</h3>
+            <p>Este proyecto involucró el uso de modelos de predicción para anticipar las tendencias en redes sociales y su impacto en la audiencia televisiva. Gracias a estos insights, los equipos de contenido pudieron ajustar su estrategia digital con antelación para maximizar el engagement.</p>
+            <div class="tech-stack">
+                <p><strong>Tecnologías:</strong> Python, Prophet, Deep Learning</p>
+                <p><strong>Dataset:</strong> Datos multiplataforma de tendencias sociales</p>
+                <p><strong>Métricas:</strong> Precisión predictiva: 85%</p>
+            </div>
+        </div>
+    </div>
+</section>
