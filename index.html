@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+        }
+
+        nav {
+            background-color: #1a202c;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            color: #4a5568;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #1a202c;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .projects {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #4a5568;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            margin-top: 1rem;
+            color: #2d3748;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Tu Nombre</h1>
+            <div>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Tu Nombre</h1>
+        <p>Machine Learning Engineer | Data Scientist | Developer</p>
+        <div class="social-links">
+            <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+            <a href="mailto:tuemail@ejemplo.com">Email</a>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Proyectos de Machine Learning</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Predicción de Precios de Casas</h3>
+                <p>Modelo de regresión usando RandomForest para predecir precios de viviendas.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, scikit-learn, pandas</p>
+                    <p><strong>Dataset:</strong> Kaggle House Prices</p>
+                    <p><strong>Métricas:</strong> RMSE: 0.14, R²: 0.91</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Clasificación de Imágenes</h3>
+                <p>CNN para clasificar imágenes de productos usando deep learning.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> TensorFlow, Keras, OpenCV</p>
+                    <p><strong>Dataset:</strong> 10,000 imágenes de productos</p>
+                    <p><strong>Métricas:</strong> Accuracy: 94%, F1-Score: 0.93</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
