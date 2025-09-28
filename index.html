@@ -13,10 +13,11 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --primary-dark: #1b5e20;
-            --secondary: #388e3c;
-            --accent: #4caf50;
+            --primary: #1b5e20;
+            --primary-dark: #0d3310;
+            --secondary: #2e7d32;
+            --accent: #bf9000;
+            --accent-light: #fff3c4;
             --bg-light: #f1f8e9;
             --text-dark: #263238;
         }
@@ -125,7 +126,8 @@
             padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--primary);
+            border-top: 4px solid var(--accent);
+            border-left: 2px solid var(--primary);
         }
 
         .project-card:hover {
@@ -148,9 +150,10 @@
         .tech-stack {
             margin-top: 1rem;
             color: var(--text-dark);
-            background-color: var(--bg-light);
+            background-color: var(--accent-light);
             padding: 1rem;
             border-radius: 8px;
+            border-left: 3px solid var(--accent);
         }
 
         .tech-stack p {
@@ -184,76 +187,75 @@
         <p>Especialista en Análisis Predictivo y Detección de Patrones para Seguridad Pública</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
-            <a href="https://jeremiasbordon30.github.io/portfolio" target="_blank">Portafolio Completo</a>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <h2>Proyectos en Análisis de Seguridad y Patrones</h2>
+        <h2>Proyectos Destacados en Data Science & Análisis</h2>
         <div class="projects-grid">
+            <!-- Proyecto: Análisis de Criptomonedas con Sentimiento -->
+            <div class="project-card">
+                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
+                <p>Proyecto universitario que implementa técnicas avanzadas de NLP para analizar sentimientos en redes sociales sobre criptomonedas y predecir movimientos de precios. Combina procesamiento de lenguaje natural con análisis de series temporales financieras.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Machine Learning, Series Temporales</p>
+                    <p><strong>Dataset:</strong> 50,000+ tweets sobre Bitcoin y Ethereum</p>
+                    <p><strong>Resultados:</strong> 85% precisión en predicción de tendencias, ROI simulado +12%</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Series Temporales Financieras -->
+            <div class="project-card">
+                <h3>Análisis Predictivo de Series Temporales ARCH-LSTM</h3>
+                <p>Sistema híbrido que combina modelos ARCH para análisis de volatilidad con redes LSTM para capturar patrones complejos en series temporales. Aplicado a múltiples activos financieros con resultados superiores a modelos tradicionales.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, TensorFlow, Modelos ARCH, LSTM, Análisis de Volatilidad</p>
+                    <p><strong>Dataset:</strong> 5 años de datos históricos de mercados financieros</p>
+                    <p><strong>Métricas:</strong> 88% precisión direccional, RMSE: 0.05, Sharpe Ratio: 2.1</p>
+                </div>
+            </div>
+
             <!-- Proyecto: Sistema de Detección de Anomalías -->
             <div class="project-card">
-                <h3>Sistema de Detección de Patrones Anómalos</h3>
-                <p>Desarrollo de modelos estadísticos para identificación automática de comportamientos atípicos en grandes volúmenes de datos. Sistema capaz de procesar información en tiempo real y generar alertas tempranas para prevención de incidentes.</p>
+                <h3>Sistema de Detección de Anomalías y Fraude</h3>
+                <p>Desarrollo de modelos estadísticos de machine learning para identificación automática de patrones anómalos y comportamientos fraudulentos en grandes volúmenes de datos. Sistema de alertas tempranas para prevención.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Machine Learning, Análisis Estadístico</p>
-                    <p><strong>Datos procesados:</strong> +50,000 registros diarios</p>
-                    <p><strong>Efectividad:</strong> 94% de precisión en detección, 85% reducción de falsos positivos</p>
+                    <p><strong>Tecnologías:</strong> Python, Isolation Forest, Machine Learning, Análisis Estadístico</p>
+                    <p><strong>Datos procesados:</strong> +100,000 transacciones analizadas</p>
+                    <p><strong>Efectividad:</strong> 92% precisión en detección, 80% reducción de falsos positivos</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Análisis de Series Temporales -->
+            <!-- Proyecto: Sistema de Recomendación -->
             <div class="project-card">
-                <h3>Análisis Predictivo de Series Temporales</h3>
-                <p>Implementación de modelos avanzados para análisis de tendencias y patrones temporales. Sistema diseñado para identificar ciclos, estacionalidad y proyecciones futuras en datos históricos de incidencia.</p>
+                <h3>Sistema de Recomendación con Machine Learning</h3>
+                <p>Implementación de algoritmos avanzados de clustering y filtrado colaborativo para sistemas de recomendación. Utiliza técnicas no supervisadas para agrupar usuarios según patrones de comportamiento y generar recomendaciones personalizadas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> R, Python, Modelos ARIMA, LSTM</p>
-                    <p><strong>Período analizado:</strong> 5 años de datos históricos</p>
-                    <p><strong>Precisión:</strong> 88% en predicción de tendencias a 30 días</p>
-                </div>
-            </div>
-
-            <!-- Proyecto: Dashboard de Control -->
-            <div class="project-card">
-                <h3>Dashboards Interactivos de Control</h3>
-                <p>Desarrollo de tableros de control automatizados con indicadores clave y visualizaciones en tiempo real. Sistema integrado para monitoreo continuo y presentación ejecutiva de resultados estratégicos.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Automatización ETL</p>
-                    <p><strong>Frecuencia:</strong> Actualización cada 15 minutos</p>
-                    <p><strong>Usuarios:</strong> 25+ usuarios simultáneos, 12 indicadores principales</p>
+                    <p><strong>Tecnologías:</strong> Python, Spark, Clustering Jerárquico, Filtrado Colaborativo</p>
+                    <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
+                    <p><strong>Resultados:</strong> 89% precisión en recomendaciones, 6 clusters identificados</p>
                 </div>
             </div>
 
             <!-- Proyecto: Análisis Geoespacial -->
             <div class="project-card">
-                <h3>Análisis de Concentración Geoespacial</h3>
-                <p>Sistema de análisis espacial para identificación de zonas de alta concentración y patrones geográficos. Incluye mapas de calor, análisis de proximidad y modelamiento territorial para optimización de recursos.</p>
+                <h3>Análisis Geoespacial y Geoestadística</h3>
+                <p>Sistema de análisis espacial para identificación de patrones geográficos y concentraciones territoriales. Implementa técnicas de geoestadística, mapas de calor y análisis de proximidad para optimización territorial.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, GIS, Análisis Espacial</p>
-                    <p><strong>Cobertura:</strong> Análisis de 15 comunas metropolitanas</p>
-                    <p><strong>Resultados:</strong> 78% mejora en asignación de recursos territoriales</p>
+                    <p><strong>Tecnologías:</strong> Python, GeoPandas, PyKrige, Folium, GIS</p>
+                    <p><strong>Cobertura:</strong> Análisis de 15 comunas y regiones</p>
+                    <p><strong>Precisión:</strong> 86% en identificación de clusters geográficos</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Automatización de Reportes -->
+            <!-- Proyecto: Dashboard Automatizado -->
             <div class="project-card">
-                <h3>Automatización de Procesos de Reporting</h3>
-                <p>Desarrollo de pipelines automatizados para generación de reportes periódicos y análisis estadísticos. Sistema que garantiza trazabilidad, calidad de datos y cumplimiento de protocolos de seguridad.</p>
+                <h3>Dashboards Automatizados y Reportería</h3>
+                <p>Desarrollo de tableros de control interactivos con automatización completa de procesos ETL. Sistema de reportería ejecutiva con indicadores clave, actualización en tiempo real y presentación para toma de decisiones estratégicas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, SQL, Automatización ETL</p>
-                    <p><strong>Frecuencia:</strong> Reportes diarios, semanales y mensuales</p>
+                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Python, Automatización ETL</p>
+                    <p><strong>Capacidad:</strong> Procesamiento de 50,000+ registros diarios</p>
                     <p><strong>Eficiencia:</strong> 90% reducción en tiempo de procesamiento manual</p>
-                </div>
-            </div>
-
-            <!-- Proyecto: Análisis Predictivo de Riesgos -->
-            <div class="project-card">
-                <h3>Modelos Predictivos de Evaluación de Riesgos</h3>
-                <p>Implementación de algoritmos de machine learning para evaluación y predicción de niveles de riesgo. Sistema de scoring automático que facilita la toma de decisiones preventivas y asignación estratégica de recursos.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Machine Learning, Análisis Estadístico, Validación Cruzada</p>
-                    <p><strong>Variables analizadas:</strong> +20 factores de riesgo</p>
-                    <p><strong>Precisión del modelo:</strong> 86% en clasificación de niveles de riesgo</p>
                 </div>
             </div>
         </div>
