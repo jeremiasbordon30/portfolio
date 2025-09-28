@@ -150,7 +150,7 @@
         .tech-stack {
             margin-top: 1rem;
             color: var(--text-dark);
-            background-color: var(--accent-light);
+            background-color: #e8f5e8;
             padding: 1rem;
             border-radius: 8px;
             border-left: 3px solid var(--accent);
@@ -193,29 +193,7 @@
     <section class="projects" id="projects">
         <h2>Proyectos Destacados en Data Science & Análisis</h2>
         <div class="projects-grid">
-            <!-- Proyecto: Análisis de Criptomonedas con Sentimiento -->
-            <div class="project-card">
-                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
-                <p>Proyecto universitario que implementa técnicas avanzadas de NLP para analizar sentimientos en redes sociales sobre criptomonedas y predecir movimientos de precios. Combina procesamiento de lenguaje natural con análisis de series temporales financieras.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Machine Learning, Series Temporales</p>
-                    <p><strong>Dataset:</strong> 50,000+ tweets sobre Bitcoin y Ethereum</p>
-                    <p><strong>Resultados:</strong> 85% precisión en predicción de tendencias, ROI simulado +12%</p>
-                </div>
-            </div>
-
-            <!-- Proyecto: Series Temporales Financieras -->
-            <div class="project-card">
-                <h3>Análisis Predictivo de Series Temporales ARCH-LSTM</h3>
-                <p>Sistema híbrido que combina modelos ARCH para análisis de volatilidad con redes LSTM para capturar patrones complejos en series temporales. Aplicado a múltiples activos financieros con resultados superiores a modelos tradicionales.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, TensorFlow, Modelos ARCH, LSTM, Análisis de Volatilidad</p>
-                    <p><strong>Dataset:</strong> 5 años de datos históricos de mercados financieros</p>
-                    <p><strong>Métricas:</strong> 88% precisión direccional, RMSE: 0.05, Sharpe Ratio: 2.1</p>
-                </div>
-            </div>
-
-            <!-- Proyecto: Sistema de Detección de Anomalías -->
+            <!-- Proyecto: Sistema de Detección de Anomalías (MÁS IMPORTANTE) -->
             <div class="project-card">
                 <h3>Sistema de Detección de Anomalías y Fraude</h3>
                 <p>Desarrollo de modelos estadísticos de machine learning para identificación automática de patrones anómalos y comportamientos fraudulentos en grandes volúmenes de datos. Sistema de alertas tempranas para prevención.</p>
@@ -226,14 +204,14 @@
                 </div>
             </div>
 
-            <!-- Proyecto: Sistema de Recomendación -->
+            <!-- Proyecto: Modelos Predictivos de Riesgos -->
             <div class="project-card">
-                <h3>Sistema de Recomendación con Machine Learning</h3>
-                <p>Implementación de algoritmos avanzados de clustering y filtrado colaborativo para sistemas de recomendación. Utiliza técnicas no supervisadas para agrupar usuarios según patrones de comportamiento y generar recomendaciones personalizadas.</p>
+                <h3>Modelos Predictivos de Evaluación de Riesgos</h3>
+                <p>Implementación de algoritmos de machine learning para evaluación y predicción de niveles de riesgo. Sistema de scoring automático que facilita la toma de decisiones preventivas y asignación estratégica de recursos.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Spark, Clustering Jerárquico, Filtrado Colaborativo</p>
-                    <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
-                    <p><strong>Resultados:</strong> 89% precisión en recomendaciones, 6 clusters identificados</p>
+                    <p><strong>Tecnologías:</strong> Machine Learning, Análisis Estadístico, Validación Cruzada</p>
+                    <p><strong>Variables analizadas:</strong> +20 factores de riesgo</p>
+                    <p><strong>Precisión del modelo:</strong> 86% en clasificación de niveles de riesgo</p>
                 </div>
             </div>
 
@@ -248,6 +226,39 @@
                 </div>
             </div>
 
+            <!-- Proyecto: Dashboards de Control -->
+            <div class="project-card">
+                <h3>Dashboards Interactivos de Control</h3>
+                <p>Desarrollo de tableros de control automatizados con indicadores clave y visualizaciones en tiempo real. Sistema integrado para monitoreo continuo y presentación ejecutiva de resultados estratégicos.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Automatización ETL</p>
+                    <p><strong>Frecuencia:</strong> Actualización cada 15 minutos</p>
+                    <p><strong>Usuarios:</strong> 25+ usuarios simultáneos, 12 indicadores principales</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Series Temporales Financieras -->
+            <div class="project-card">
+                <h3>Análisis Predictivo de Series Temporales ARCH-LSTM</h3>
+                <p>Sistema híbrido que combina modelos ARCH para análisis de volatilidad con redes LSTM para capturar patrones complejos en series temporales. Aplicado a múltiples activos financieros con resultados superiores a modelos tradicionales.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, TensorFlow, Modelos ARCH, LSTM, Análisis de Volatilidad</p>
+                    <p><strong>Dataset:</strong> 5 años de datos históricos de mercados financieros</p>
+                    <p><strong>Métricas:</strong> 88% precisión direccional, RMSE: 0.05, Sharpe Ratio: 2.1</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Sistema de Recomendación -->
+            <div class="project-card">
+                <h3>Sistema de Recomendación con Machine Learning</h3>
+                <p>Implementación de algoritmos avanzados de clustering y filtrado colaborativo para sistemas de recomendación. Utiliza técnicas no supervisadas para agrupar usuarios según patrones de comportamiento y generar recomendaciones personalizadas.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, Spark, Clustering Jerárquico, Filtrado Colaborativo</p>
+                    <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
+                    <p><strong>Resultados:</strong> 89% precisión en recomendaciones, 6 clusters identificados</p>
+                </div>
+            </div>
+
             <!-- Proyecto: Dashboard Automatizado -->
             <div class="project-card">
                 <h3>Dashboards Automatizados y Reportería</h3>
@@ -256,6 +267,17 @@
                     <p><strong>Tecnologías:</strong> Power BI, SQL Server, Python, Automatización ETL</p>
                     <p><strong>Capacidad:</strong> Procesamiento de 50,000+ registros diarios</p>
                     <p><strong>Eficiencia:</strong> 90% reducción en tiempo de procesamiento manual</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Análisis de Criptomonedas (MENOS IMPORTANTE - Proyecto Universitario) -->
+            <div class="project-card">
+                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
+                <p>Proyecto universitario que implementa técnicas avanzadas de NLP para analizar sentimientos en redes sociales sobre criptomonedas y predecir movimientos de precios. Combina procesamiento de lenguaje natural con análisis de series temporales financieras.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Machine Learning, Series Temporales</p>
+                    <p><strong>Dataset:</strong> 50,000+ tweets sobre Bitcoin y Ethereum</p>
+                    <p><strong>Resultados:</strong> 85% precisión en predicción de tendencias, ROI simulado +12%</p>
                 </div>
             </div>
         </div>
