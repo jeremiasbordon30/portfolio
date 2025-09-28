@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Data Science & ML</title>
+    <title>Portfolio Análisis de Datos & Seguridad</title>
     <style>
         * {
             margin: 0;
@@ -13,10 +13,11 @@
         }
 
         :root {
-            --primary: #ff6b00;
-            --primary-dark: #e65100;
-            --secondary: #1a237e;
-            --bg-light: #fff3e0;
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --secondary: #388e3c;
+            --accent: #4caf50;
+            --bg-light: #f1f8e9;
             --text-dark: #263238;
         }
 
@@ -25,7 +26,7 @@
         }
 
         nav {
-            background-color: var(--secondary);
+            background-color: var(--primary-dark);
             color: white;
             padding: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -47,11 +48,11 @@
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: white;
             padding: 6rem 1rem;
             text-align: center;
@@ -72,7 +73,7 @@
 
         .credentials {
             font-weight: bold;
-            color: var(--primary);
+            color: var(--accent);
             margin-bottom: 1rem;
         }
 
@@ -87,7 +88,7 @@
             color: white;
             text-decoration: none;
             padding: 1rem 2rem;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             border-radius: 25px;
             transition: transform 0.3s, background-color 0.3s;
             font-weight: bold;
@@ -96,7 +97,7 @@
 
         .social-links a:hover {
             transform: translateY(-3px);
-            background-color: var(--primary-dark);
+            background-color: var(--accent);
         }
 
         .projects {
@@ -108,7 +109,7 @@
         .projects h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: var(--secondary);
+            color: var(--primary-dark);
             text-align: center;
         }
 
@@ -180,78 +181,79 @@
     <section class="hero">
         <h1>Jeremías Bordon</h1>
         <p class="credentials">Ingeniero en Estadística | Universidad de Valparaíso</p>
-        <p>Data Scientist & Machine Learning Engineer especializado en análisis predictivo, series temporales financieras y procesamiento de datos masivos</p>
+        <p>Especialista en Análisis Predictivo y Detección de Patrones para Seguridad Pública</p>
         <div class="social-links">
             <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
-            <a href="mailto:jeremiasbordon30@gmail.com" onclick="window.location.href='mailto:jeremiasbordon30@gmail.com'">Email</a>
+            <a href="https://jeremiasbordon30.github.io/portfolio" target="_blank">Portafolio Completo</a>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <h2>Proyectos Destacados en Data Science & AI</h2>
+        <h2>Proyectos en Análisis de Seguridad y Patrones</h2>
         <div class="projects-grid">
-            <!-- Proyecto: Sistema de Recomendación con MovieLens -->
+            <!-- Proyecto: Sistema de Detección de Anomalías -->
             <div class="project-card">
-                <h3>Sistema de Recomendación con MovieLens</h3>
-                <p>Implementé un sistema de recomendación utilizando técnicas de clustering avanzadas que agrupan a los usuarios según patrones de calificación y etiquetas. Este enfoque permite generar recomendaciones más relevantes al basarse en las similitudes entre usuarios y películas, optimizando el sistema con modelos de machine learning no supervisados.</p>
+                <h3>Sistema de Detección de Patrones Anómalos</h3>
+                <p>Desarrollo de modelos estadísticos para identificación automática de comportamientos atípicos en grandes volúmenes de datos. Sistema capaz de procesar información en tiempo real y generar alertas tempranas para prevención de incidentes.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Spark, Python, TensorFlow, Keras, clustering jerárquico</p>
-                    <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
-                    <p><strong>Métricas:</strong> Precisión en recomendaciones: 91%, Número de clusters: 6</p>
-                </div>
-            </div>
- 
-
-            <!-- Proyecto 1: Análisis de Criptomonedas -->
-            <div class="project-card">
-                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
-                <p>Sistema avanzado de NLP que analiza sentimientos en tiempo real de tweets sobre criptomonedas para predecir movimientos de precios. Implementa técnicas de procesamiento de lenguaje natural y análisis de series temporales.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, pandas, scikit-learn</p>
-                    <p><strong>Dataset:</strong> 100,000+ tweets sobre Bitcoin, Ethereum y otras criptomonedas</p>
-                    <p><strong>Métricas:</strong> Accuracy en predicción de tendencia: 88%, ROI simulado: +15%</p>
+                    <p><strong>Tecnologías:</strong> Python, Machine Learning, Análisis Estadístico</p>
+                    <p><strong>Datos procesados:</strong> +50,000 registros diarios</p>
+                    <p><strong>Efectividad:</strong> 94% de precisión en detección, 85% reducción de falsos positivos</p>
                 </div>
             </div>
 
-            <!-- Proyecto 2: Series Financieras -->
+            <!-- Proyecto: Análisis de Series Temporales -->
             <div class="project-card">
-                <h3>Predicción Avanzada de Series Financieras ARCH-LSTM</h3>
-                <p>Sistema híbrido que combina modelos ARCH para la volatilidad con redes LSTM para capturar patrones complejos en series financieras. Implementado para diversos activos financieros con resultados excepcionales.</p>
+                <h3>Análisis Predictivo de Series Temporales</h3>
+                <p>Implementación de modelos avanzados para análisis de tendencias y patrones temporales. Sistema diseñado para identificar ciclos, estacionalidad y proyecciones futuras en datos históricos de incidencia.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, TensorFlow, ARCH, LSTM, pandas_ta</p>
-                    <p><strong>Dataset:</strong> Datos históricos de múltiples mercados financieros</p>
-                    <p><strong>Métricas:</strong> Precisión direccional: 92%, RMSE: 0.05, Sharpe Ratio: 2.3</p>
+                    <p><strong>Tecnologías:</strong> R, Python, Modelos ARIMA, LSTM</p>
+                    <p><strong>Período analizado:</strong> 5 años de datos históricos</p>
+                    <p><strong>Precisión:</strong> 88% en predicción de tendencias a 30 días</p>
                 </div>
             </div>
 
-            <!-- [Resto de los proyectos originales...] -->
+            <!-- Proyecto: Dashboard de Control -->
             <div class="project-card">
-                <h3>Sistema de Recomendación Financiera</h3>
-                <p>Motor de recomendación basado en ML para sugerir activos financieros basado en perfiles de riesgo y preferencias de inversión, implementando técnicas de filtrado colaborativo y análisis de contenido.</p>
+                <h3>Dashboards Interactivos de Control</h3>
+                <p>Desarrollo de tableros de control automatizados con indicadores clave y visualizaciones en tiempo real. Sistema integrado para monitoreo continuo y presentación ejecutiva de resultados estratégicos.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Surprise, scikit-learn, FastAPI</p>
-                    <p><strong>Dataset:</strong> Datos históricos de operaciones y perfiles de inversión</p>
-                    <p><strong>Métricas:</strong> RMSE: 0.12, Precisión en recomendaciones: 92%</p>
+                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Automatización ETL</p>
+                    <p><strong>Frecuencia:</strong> Actualización cada 15 minutos</p>
+                    <p><strong>Usuarios:</strong> 25+ usuarios simultáneos, 12 indicadores principales</p>
                 </div>
             </div>
 
+            <!-- Proyecto: Análisis Geoespacial -->
             <div class="project-card">
-                <h3>Sistema de Detección de Anomalías en Mercados Financieros</h3>
-                <p>Modelo de detección de patrones anómalos en mercados financieros, especialmente útil para identificar manipulación de mercado y movimientos inusuales en tiempo real.</p>
+                <h3>Análisis de Concentración Geoespacial</h3>
+                <p>Sistema de análisis espacial para identificación de zonas de alta concentración y patrones geográficos. Incluye mapas de calor, análisis de proximidad y modelamiento territorial para optimización de recursos.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Isolation Forest, LSTM Autoencoders</p>
-                    <p><strong>Dataset:</strong> Tick data de mercados financieros</p>
-                    <p><strong>Métricas:</strong> Recall: 94%, Precisión: 92%, F1-Score: 93%</p>
+                    <p><strong>Tecnologías:</strong> Python, GIS, Análisis Espacial</p>
+                    <p><strong>Cobertura:</strong> Análisis de 15 comunas metropolitanas</p>
+                    <p><strong>Resultados:</strong> 78% mejora en asignación de recursos territoriales</p>
                 </div>
             </div>
 
+            <!-- Proyecto: Automatización de Reportes -->
             <div class="project-card">
-                <h3>Análisis Geoespacial de Mercados Financieros</h3>
-                <p>Sistema de análisis que combina datos geoespaciales con información financiera para identificar patrones y oportunidades de inversión basadas en localización.</p>
+                <h3>Automatización de Procesos de Reporting</h3>
+                <p>Desarrollo de pipelines automatizados para generación de reportes periódicos y análisis estadísticos. Sistema que garantiza trazabilidad, calidad de datos y cumplimiento de protocolos de seguridad.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, GeoPandas, PyKrige, Folium</p>
-                    <p><strong>Dataset:</strong> Datos financieros y geoespaciales globales</p>
-                    <p><strong>Métricas:</strong> Precisión en clustering geográfico: 88%, ROI por región: +12%</p>
+                    <p><strong>Tecnologías:</strong> Python, SQL, Automatización ETL</p>
+                    <p><strong>Frecuencia:</strong> Reportes diarios, semanales y mensuales</p>
+                    <p><strong>Eficiencia:</strong> 90% reducción en tiempo de procesamiento manual</p>
+                </div>
+            </div>
+
+            <!-- Proyecto: Análisis Predictivo de Riesgos -->
+            <div class="project-card">
+                <h3>Modelos Predictivos de Evaluación de Riesgos</h3>
+                <p>Implementación de algoritmos de machine learning para evaluación y predicción de niveles de riesgo. Sistema de scoring automático que facilita la toma de decisiones preventivas y asignación estratégica de recursos.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Machine Learning, Análisis Estadístico, Validación Cruzada</p>
+                    <p><strong>Variables analizadas:</strong> +20 factores de riesgo</p>
+                    <p><strong>Precisión del modelo:</strong> 86% en clasificación de niveles de riesgo</p>
                 </div>
             </div>
         </div>
