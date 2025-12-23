@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Análisis de Datos & Seguridad</title>
+    <title>Jeremías Bordon | Business Intelligence & Data Analytics</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary: #1b5e20;
-            --primary-dark: #0d3310;
-            --secondary: #2e7d32;
-            --accent: #bf9000;
-            --accent-light: #fff3c4;
-            --bg-light: #f1f8e9;
-            --text-dark: #263238;
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #3b82f6;
+            --accent: #fbbf24;
+            --accent-light: #fef3c7;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --border: #e2e8f0;
         }
 
         body {
             background-color: var(--bg-light);
+            color: var(--text-dark);
         }
 
         nav {
             background-color: var(--primary-dark);
             color: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav .container {
@@ -41,11 +46,17 @@
             align-items: center;
         }
 
+        nav h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 1.5rem;
+            margin-left: 2rem;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         nav a:hover {
@@ -55,109 +66,210 @@
         .hero {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: white;
-            padding: 6rem 1rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
 
         .hero h1 {
             font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 600;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            color: #fff;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .credentials {
-            font-weight: bold;
-            color: var(--accent);
+        .hero .skills-highlight {
+            background-color: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem auto;
+            max-width: 900px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero .skills-highlight h3 {
             margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .hero .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .hero .skill-tag {
+            background-color: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .social-links a {
             color: white;
             text-decoration: none;
-            padding: 1rem 2rem;
+            padding: 0.75rem 2rem;
             background-color: var(--secondary);
             border-radius: 25px;
-            transition: transform 0.3s, background-color 0.3s;
-            font-weight: bold;
-            font-size: 1.1rem;
+            transition: all 0.3s;
+            font-weight: 600;
         }
 
         .social-links a:hover {
             transform: translateY(-3px);
             background-color: var(--accent);
+            color: var(--primary-dark);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        .projects {
+        .section {
             max-width: 1200px;
             margin: 4rem auto;
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
 
-        .projects h2 {
+        .section h2 {
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             color: var(--primary-dark);
             text-align: center;
+            font-weight: 700;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
             background-color: white;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 4px solid var(--accent);
-            border-left: 2px solid var(--primary);
+            transition: all 0.3s;
+            border-left: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .project-card.featured {
+            border-left-color: var(--accent);
+            background: linear-gradient(135deg, white, var(--accent-light));
+        }
+
+        .project-badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .project-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--primary-dark);
+            font-weight: 600;
         }
 
         .project-card p {
             color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
         }
 
         .tech-stack {
-            margin-top: 1rem;
-            color: var(--text-dark);
-            background-color: #e8f5e8;
-            padding: 1rem;
+            background-color: var(--bg-light);
+            padding: 1.25rem;
             border-radius: 8px;
-            border-left: 3px solid var(--accent);
+            border-left: 3px solid var(--primary);
         }
 
         .tech-stack p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .tech-stack strong {
+            color: var(--primary-dark);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .metric-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid var(--border);
+        }
+
+        .metric-item .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .metric-item .label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
         }
 
         @media (max-width: 768px) {
@@ -168,6 +280,19 @@
             .hero h1 {
                 font-size: 2rem;
             }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 1rem;
+            }
         }
     </style>
 </head>
@@ -177,110 +302,170 @@
             <h1>Jeremías Bordon</h1>
             <div>
                 <a href="#projects">Proyectos</a>
+                <a href="#contact">Contacto</a>
             </div>
         </div>
     </nav>
 
     <section class="hero">
         <h1>Jeremías Bordon</h1>
-        <p class="credentials">Ingeniero en Estadística | Universidad de Valparaíso</p>
-        <p>Especialista en Análisis Predictivo y Detección de Patrones</p>
+        <p class="subtitle">Business Intelligence Analyst | Data Engineer</p>
+        <p>Ingeniero Estadístico especializado en análisis de grandes volúmenes de datos, automatización de reportes y construcción de dashboards estratégicos para toma de decisiones</p>
+        
+        <div class="skills-highlight">
+            <h3>Stack Tecnológico</h3>
+            <div class="skills-tags">
+                <span class="skill-tag">SQL (Avanzado)</span>
+                <span class="skill-tag">Python (Avanzado)</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">Looker Studio</span>
+                <span class="skill-tag">ETL Automation</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">Big Data</span>
+            </div>
+        </div>
+
         <div class="social-links">
             <a href="https://linkedin.com/in/jeremiasbordon" target="_blank">LinkedIn</a>
+            <a href="mailto:jeremias.bordon.onate@gmail.com">Contacto</a>
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2>Proyectos Destacados en Data Science & Análisis</h2>
+    <section class="section" id="projects">
+        <h2>Proyectos Destacados</h2>
+        
         <div class="projects-grid">
-            <!-- Proyecto: Sistema de Detección de Anomalías (MÁS IMPORTANTE) -->
-            <div class="project-card">
-                <h3>Sistema de Detección de Anomalías y Fraude</h3>
-                <p>Desarrollo de modelos estadísticos de machine learning para identificación automática de patrones anómalos y comportamientos fraudulentos en grandes volúmenes de datos. Sistema de alertas tempranas para prevención.</p>
+            <!-- Proyecto 1: Dashboards Automatizados BI -->
+            <div class="project-card featured">
+                <span class="project-badge">⭐ Proyecto Destacado</span>
+                <h3>Sistema de Dashboards Automatizados para Business Intelligence</h3>
+                <p>Desarrollo integral de tableros de control interactivos con automatización completa de procesos ETL. Sistema de reportería ejecutiva con actualización en tiempo real de indicadores clave para soporte estratégico a la toma de decisiones.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, Isolation Forest, Machine Learning, Análisis Estadístico</p>
-                    <p><strong>Datos procesados:</strong> +100,000 transacciones analizadas</p>
-                    <p><strong>Efectividad:</strong> 92% precisión en detección, 80% reducción de falsos positivos</p>
+                    <p><strong>Tecnologías:</strong> Power BI, Tableau, SQL Server, Python, Automatización ETL</p>
+                    <p><strong>Impacto:</strong> Procesamiento de 50,000+ registros diarios, 90% reducción en tiempo de reportería manual</p>
+                    <p><strong>Funcionalidades:</strong> 12+ KPIs estratégicos, actualización cada 15 minutos, 25+ usuarios simultáneos</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Modelos Predictivos de Riesgos -->
-            <div class="project-card">
-                <h3>Modelos Predictivos de Evaluación de Riesgos</h3>
-                <p>Implementación de algoritmos de machine learning para evaluación y predicción de niveles de riesgo. Sistema de scoring automático que facilita la toma de decisiones preventivas y asignación estratégica de recursos.</p>
+            <!-- Proyecto 2: Pipeline ETL Automatizado -->
+            <div class="project-card featured">
+                <span class="project-badge">⭐ Proyecto Destacado</span>
+                <h3>Pipeline ETL Automatizado para Procesamiento de Datos Masivos</h3>
+                <p>Implementación de arquitectura ETL robusta con SQL y Python para extracción, validación y transformación de datos desde múltiples fuentes. Sistema de monitoreo de calidad de datos con validación continua y alertas automáticas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Machine Learning, Análisis Estadístico, Validación Cruzada</p>
-                    <p><strong>Variables analizadas:</strong> +20 factores de riesgo</p>
-                    <p><strong>Precisión del modelo:</strong> 86% en clasificación de niveles de riesgo</p>
+                    <p><strong>Tecnologías:</strong> Python (Pandas, SQLAlchemy), SQL Server, Oracle, Validación de Datos</p>
+                    <p><strong>Capacidad:</strong> Procesamiento de 1M+ registros diarios desde 8 fuentes diferentes</p>
+                    <p><strong>Mejoras:</strong> 85% reducción en errores de datos, 70% mejora en tiempo de procesamiento</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Análisis Geoespacial -->
+            <!-- Proyecto 3: Sistema de Detección de Anomalías -->
             <div class="project-card">
-                <h3>Análisis Geoespacial y Geoestadística</h3>
-                <p>Sistema de análisis espacial para identificación de patrones geográficos y concentraciones territoriales. Implementa técnicas de geoestadística, mapas de calor y análisis de proximidad para optimización territorial.</p>
+                <h3>Sistema de Detección de Anomalías y Comportamientos Atípicos</h3>
+                <p>Desarrollo de modelos de machine learning para identificación automática de patrones anómalos en operaciones y transacciones. Sistema de alertas tempranas con scoring de riesgo para acciones preventivas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, GeoPandas, PyKrige, Folium, GIS</p>
-                    <p><strong>Cobertura:</strong> Análisis de 15 comunas y regiones</p>
+                    <p><strong>Tecnologías:</strong> Python, Scikit-learn, Isolation Forest, Análisis Estadístico</p>
+                    <p><strong>Dataset:</strong> 100,000+ transacciones analizadas</p>
+                    <p><strong>Resultados:</strong> 92% precisión en detección, 80% reducción de falsos positivos</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Análisis Predictivo de Indicadores -->
+            <div class="project-card">
+                <h3>Modelos Predictivos para Forecasting de Indicadores Operativos</h3>
+                <p>Implementación de modelos estadísticos y machine learning para predicción de métricas operativas clave. Sistema de monitoreo continuo con visualizaciones automáticas de tendencias y proyecciones.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, R, Series Temporales, Machine Learning, Power BI</p>
+                    <p><strong>Variables:</strong> 20+ indicadores operativos monitoreados</p>
+                    <p><strong>Precisión:</strong> 86% en clasificación, 88% en predicción direccional</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 5: Análisis Geoespacial -->
+            <div class="project-card">
+                <h3>Sistema de Análisis Geoespacial y Optimización Territorial</h3>
+                <p>Análisis espacial avanzado para identificación de patrones geográficos y concentraciones territoriales. Implementación de técnicas de geoestadística, mapas de calor y análisis de proximidad para optimización logística.</p>
+                <div class="tech-stack">
+                    <p><strong>Tecnologías:</strong> Python, GeoPandas, PyKrige, Folium, SQL, GIS</p>
+                    <p><strong>Cobertura:</strong> Análisis de 15 regiones y comunas</p>
                     <p><strong>Precisión:</strong> 86% en identificación de clusters geográficos</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Dashboards de Control -->
+            <!-- Proyecto 6: Sistema de Control de Calidad de Datos -->
             <div class="project-card">
-                <h3>Dashboards Interactivos de Control</h3>
-                <p>Desarrollo de tableros de control automatizados con indicadores clave y visualizaciones en tiempo real. Sistema integrado para monitoreo continuo y presentación ejecutiva de resultados estratégicos.</p>
+                <h3>Sistema de Monitoreo y Control de Calidad de Datos</h3>
+                <p>Desarrollo de framework automatizado para validación, limpieza y monitoreo continuo de calidad de datos. Implementa reglas de negocio, detección de inconsistencias y reportes automáticos de calidad.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Automatización ETL</p>
-                    <p><strong>Frecuencia:</strong> Actualización cada 15 minutos</p>
-                    <p><strong>Usuarios:</strong> 25+ usuarios simultáneos, 12 indicadores principales</p>
+                    <p><strong>Tecnologías:</strong> Python, SQL, Great Expectations, Automatización</p>
+                    <p><strong>Validaciones:</strong> 50+ reglas de calidad implementadas</p>
+                    <p><strong>Impacto:</strong> 95% de datos validados, reducción del 85% en errores</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Series Temporales Financieras -->
+            <!-- Proyecto 7: Análisis Predictivo Series Temporales -->
             <div class="project-card">
-                <h3>Análisis Predictivo de Series Temporales ARCH-LSTM</h3>
-                <p>Sistema híbrido que combina modelos ARCH para análisis de volatilidad con redes LSTM para capturar patrones complejos en series temporales. Aplicado a múltiples activos financieros con resultados superiores a modelos tradicionales.</p>
+                <h3>Análisis Predictivo de Series Temporales con Modelos Híbridos</h3>
+                <p>Sistema híbrido que combina modelos ARCH para análisis de volatilidad con redes LSTM para capturar patrones complejos en series temporales. Aplicado a pronóstico de múltiples métricas operativas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, TensorFlow, Modelos ARCH, LSTM, Análisis de Volatilidad</p>
-                    <p><strong>Dataset:</strong> 5 años de datos históricos de mercados financieros</p>
-                    <p><strong>Métricas:</strong> 88% precisión direccional, RMSE: 0.05, Sharpe Ratio: 2.1</p>
+                    <p><strong>Tecnologías:</strong> Python, TensorFlow, LSTM, Modelos ARCH, Análisis de Volatilidad</p>
+                    <p><strong>Dataset:</strong> 5 años de datos históricos operativos</p>
+                    <p><strong>Métricas:</strong> 88% precisión direccional, RMSE: 0.05</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Sistema de Recomendación -->
+            <!-- Proyecto 8: Sistema de Recomendación -->
             <div class="project-card">
                 <h3>Sistema de Recomendación con Machine Learning</h3>
-                <p>Implementación de algoritmos avanzados de clustering y filtrado colaborativo para sistemas de recomendación. Utiliza técnicas no supervisadas para agrupar usuarios según patrones de comportamiento y generar recomendaciones personalizadas.</p>
+                <p>Implementación de algoritmos avanzados de clustering y filtrado colaborativo. Utiliza técnicas no supervisadas para segmentación de usuarios según patrones de comportamiento y generación de recomendaciones personalizadas.</p>
                 <div class="tech-stack">
                     <p><strong>Tecnologías:</strong> Python, Spark, Clustering Jerárquico, Filtrado Colaborativo</p>
                     <p><strong>Dataset:</strong> MovieLens 20M (20M ratings, 138K usuarios)</p>
-                    <p><strong>Resultados:</strong> 89% precisión en recomendaciones, 6 clusters identificados</p>
+                    <p><strong>Resultados:</strong> 89% precisión, 6 clusters identificados</p>
                 </div>
             </div>
 
-            <!-- Proyecto: Dashboard Automatizado -->
+            <!-- Proyecto 9: Reportería Automatizada SQL -->
             <div class="project-card">
-                <h3>Dashboards Automatizados y Reportería</h3>
-                <p>Desarrollo de tableros de control interactivos con automatización completa de procesos ETL. Sistema de reportería ejecutiva con indicadores clave, actualización en tiempo real y presentación para toma de decisiones estratégicas.</p>
+                <h3>Sistema de Reportería Automatizada con SQL y Python</h3>
+                <p>Desarrollo de queries SQL complejas optimizadas y scripts Python para generación automática de reportes operativos. Sistema de distribución automática de reportes a equipos directivos con visualizaciones estratégicas.</p>
                 <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Power BI, SQL Server, Python, Automatización ETL</p>
-                    <p><strong>Capacidad:</strong> Procesamiento de 50,000+ registros diarios</p>
-                    <p><strong>Eficiencia:</strong> 90% reducción en tiempo de procesamiento manual</p>
-                </div>
-            </div>
-
-            <!-- Proyecto: Análisis de Criptomonedas (MENOS IMPORTANTE - Proyecto Universitario) -->
-            <div class="project-card">
-                <h3>Predicción de Criptomonedas mediante Análisis de Sentimiento</h3>
-                <p>Proyecto universitario que implementa técnicas avanzadas de NLP para analizar sentimientos en redes sociales sobre criptomonedas y predecir movimientos de precios. Combina procesamiento de lenguaje natural con análisis de series temporales financieras.</p>
-                <div class="tech-stack">
-                    <p><strong>Tecnologías:</strong> Python, NLTK, Tweepy, Machine Learning, Series Temporales</p>
-                    <p><strong>Dataset:</strong> 50,000+ tweets sobre Bitcoin y Ethereum</p>
-                    <p><strong>Resultados:</strong> 85% precisión en predicción de tendencias, ROI simulado +12%</p>
+                    <p><strong>Tecnologías:</strong> SQL Server, Oracle, Python, Automatización, Email Reports</p>
+                    <p><strong>Queries:</strong> 30+ consultas complejas optimizadas</p>
+                    <p><strong>Frecuencia:</strong> Reportes diarios, semanales y mensuales automatizados</p>
                 </div>
             </div>
         </div>
+
+        <div class="metrics">
+            <div class="metric-item">
+                <div class="number">1M+</div>
+                <div class="label">Registros procesados diariamente</div>
+            </div>
+            <div class="metric-item">
+                <div class="number">90%</div>
+                <div class="label">Reducción en tiempo de reportería</div>
+            </div>
+            <div class="metric-item">
+                <div class="number">50+</div>
+                <div class="label">Dashboards automatizados</div>
+            </div>
+            <div class="metric-item">
+                <div class="number">92%</div>
+                <div class="label">Precisión en modelos predictivos</div>
+            </div>
+        </div>
     </section>
+
+    <footer id="contact">
+        <h3>Contacto</h3>
+        <p>jeremias.bordon.onate@gmail.com</p>
+        <p>+569 83564091</p>
+        <p>Olmué, Región de Valparaíso, Chile</p>
+        <div style="margin-top: 1rem;">
+            <a href="https://linkedin.com/in/jeremiasbordon" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 1rem;">LinkedIn</a>
+        </div>
+    </footer>
 </body>
 </html>
